@@ -1,0 +1,12 @@
+// Active9 Server (http://www.active9.com/server)
+// Copyright 2012 Active9 LLC (Created By: Chris McCaulley <talkquazi@gmail.com>)
+// LICENSE: GPL V3
+/*
+Active9 Server Readme
+--------------------------------------
+
+All of the heavy lifting is done by either active9_server.bar or active9_server.sh.
+The rest is done by active9_server.php and the configurations located inside the config
+file in this files directory.
+
+http://www.active9.com/server/

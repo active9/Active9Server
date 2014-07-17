@@ -1,0 +1,8 @@
+body {padding:0px;border:0px;margin:0px;background:#FFFFFF;color:#000000;}
+blockquote {padding:30px;background:#EEEEFF;border:3px solid #DDDDFF;font-family:verdana;font-size:13px;}
+blockquote blockquote {padding:30px;background:#DDDDFF;border:3px solid #DDDDFF;font-family:verdana;font-size:13px;}
+h1 {font-size:22px;font-family:verdana;font-weight:bold;color:#000000;padding:15px;}
+h2 {font-size:18px;font-family:verdana;font-weight:bold;color:#000000;padding:15px;}
+h3 {font-size:18px;font-family:verdana;font-weight:bold;color:#000000;padding:15px;}
+p {font-size:14px;color:#000000;padding:15px;}
+code {display:block;font-size:12px;font-family:monospace,sanserif;color:#000000;padding:15px;background:#ffffff;margin:15px;clear:left;white-space:pre;}
