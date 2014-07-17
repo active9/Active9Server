@@ -20,7 +20,7 @@ DEVELOPERS
 
 	- Contribute your modifications and code to https://github.com/active9/active9server
 	- Detailed plugin creation and management descriptions can be found inside active9_server.php
-	- All information for development, modifications, configurations, and plugins can be found at  the web site http://www.active9.com/server/
+	- All information can be found at the web site http://www.active9.com/server/
 	- Access logs can be found in active9_server/logs/ (You may need to chmod 777 this folder)
 
 USAGE
