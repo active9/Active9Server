@@ -1,0 +1,7 @@
+[Version 1.1 - April 4th, 2012]
+ - Added NetBeans project setup defaults (Importable via NetBeans IDE)
+ - Fixed folder logic and linkable logic for the interal server to display the proper data.
+ - The server configuration file has been updated to reflect changes to 1.1
+
+[Version 1.0]
+ - Initial Release

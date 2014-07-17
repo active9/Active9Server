@@ -1,0 +1,15 @@
+// Active9 Server (http://www.active9.com/server)
+// Copyright 2012 Active9 LLC (Created By: Chris McCaulley <talkquazi@gmail.com>)
+// LICENSE: GPL V3
+
+INSTALLING:
+
+(On All Platforms)
+	- Download php 5.4 or higher from php.net for your system.
+	- Copy the contents of this folder to the same directory as your php binary
+	- Run the provided active9_server.bat (Windows) or active9_server.sh (Linux)
+	- Your server should be running on http://localhost/ or http://127.0.0.1/
+	- Place your scripts inside the /public_html/ folder provided and Enjoy!
+
+For detailed installation instructions and the complete Active9 Server manual
+visit http://www.active9.com/server

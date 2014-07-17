@@ -4,7 +4,7 @@
 // LICENSE: GPL V3
 /*
 
-	Active9 Server - Version 1.0
+	Active9 Server - Version 1.1
 	Utilizing The PHP-CLI Development Server
 	---------------------------------------------------------------------------------------------
 	This is a highly experimental development server is designed to run in php 5.4.0 and greater
@@ -55,7 +55,7 @@
 	---------------------------------------------------------------------------------------------
 */
 class active9_server {
-	public $version = "1.0";
+	public $version = "1.1";
 	private $plugins;
 	private $config;
 	private $index_list;
@@ -115,8 +115,8 @@ class active9_server {
 	}
 
 	function php_validate() {
-		if (self::$php_version<"5.3") {
-			die("PHP Version 5.3 or greater is required");
+		if (self::$php_version<"5.4") {
+			die("PHP Version 5.4 or greater is required");
 		}
 	}
 
@@ -237,9 +237,11 @@ class active9_server {
 							$this->__render_runtime_triggers();
 							break;
 						} else {
+							self::$cwd = getcwd();
+							$workingdir = $this->fix_working_directory($parsed_url_path);
 							$incfile = str_replace($li,"",$parsed_url_path).$li;
-							if (is_file($incfile)) {
-								include_once($incfile);
+							if (is_file(self::$cwd."/".$incfile)) {
+								include_once(self::$cwd."/".$incfile);
 								$this->__render_runtime_triggers();
 								self::$was_not_found = 0;
 								break;
@@ -254,25 +256,25 @@ class active9_server {
 			}
 		} else if (preg_match('/\.(?:'.str_replace(",","|",$this->index_list).')$/', $_SERVER['REQUEST_URI'])) {
 			if (is_file($parsed_urL_path)) {
-				$thisdir = getcwd();
+				self::$cwd = getcwd();
 				$workingdir = $this->fix_working_directory($parsed_url_path);
 				include_once(basename($parsed_url_path));
-				chdir($thisdir);
+				chdir(self::$cwd);
 				$this->__render_runtime_triggers();
 			} else {
 				self::$was_not_found = 1;
 			}
-		} else if (preg_match('/(?:'.str_replace(",","|",$this->php_type_list).')$/', $parsed_url_path)) {
+		} else if (preg_match('/\.(?:'.str_replace(",","|",$this->php_type_list).')$/', $parsed_url_path)) {
 			if (is_file($parsed_url_path)) {
-				$thisdir = getcwd();
+				self::$cwd = getcwd();
 				$workingdir = $this->fix_working_directory($parsed_url_path);
 				include_once(basename($parsed_url_path));
-				chdir($thisdir);
+				chdir(self::$cwd);
 				$this->__render_runtime_triggers();
 			} else {				
 				self::$was_not_found = 1;
 			}
-		} else if (preg_match('/(?:'.str_replace(",","|",$this->mime_type_list).')$/', $parsed_url_path)) {
+		} else if (preg_match('/\.(?:'.str_replace(",","|",$this->mime_type_list).')$/', $parsed_url_path)) {
 			if (is_file($parsed_url_path)) {
 				header("Content-type: ".$this->mime_content_type($parsed_url_path));
 				echo file_get_contents($parsed_url_path);
@@ -293,10 +295,11 @@ class active9_server {
 
 	function fix_working_directory($working_file) {
 		if (is_dir($working_file)) {
-			chdir(basename($working_file));
+			chdir(self::$cwd."/".$working_file);
 		} else {
-			$working_file = pathinfo($working_file);
-			chdir(dirname($working_file['dirname']));
+			$working_filex = pathinfo($working_file);
+			$working_filex = $working_filex['dirname']."/".basename($working_file);
+			chdir(self::$cwd."/".dirname($working_filex));
 		}
 		return dirname($working_file);
 		
