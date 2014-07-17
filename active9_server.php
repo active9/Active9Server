@@ -55,7 +55,7 @@
 	---------------------------------------------------------------------------------------------
 */
 class active9_server {
-	public $version = "1.1";
+	public $version = "1.2";
 	private $plugins;
 	private $config;
 	private $index_list;

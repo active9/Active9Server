@@ -10,7 +10,7 @@
 <h1>Active9 Server</h1>
 <p>A Portable PHP Development Web Server With Plugins!</p>
 <blockquote>
-	<p><br /><br />Active9 Server Version <?php echo $_SERVER['Active9_Server_Version']; ?> is up and running on <? echo $_SERVER['SERVER_NAME']; ?> port <? echo $_SERVER['SERVER_PORT']; ?> using PHP <? echo active9_server::$php_version; ?> Thread Safe: <? if (active9_server::$is_thread_safe) { echo "true\n"; } else { echo "false\n"; } ?><br /><br /><a href="http://www.active9.com/server/version_check.php?v=<?php echo $_SERVER['Active9_Server_Version']; ?>">Check For Updates</a> | <a href="plugin_management.php">Plugin Management</a> | <a href="php_info.php">PHP Info</a> |  <a href="http://php.mirror.active9.com">PHP Manual</a> |  <a href="http://www.active9.com/server/manual/">Active9 Server Manual</a></p>
+	<p><br /><br />Active9 Server Version <?php echo $_SERVER['Active9_Server_Version']; ?> is up and running on <? echo $_SERVER['SERVER_NAME']; ?> port <? echo $_SERVER['SERVER_PORT']; ?> using PHP <? echo active9_server::$php_version; ?> Thread Safe: <? if (active9_server::$is_thread_safe) { echo "true\n"; } else { echo "false\n"; } ?><br /><br /><a href="http://www.active9.com/server/version_check.php?v=<?php echo $_SERVER['Active9_Server_Version']; ?>">Check For Updates</a> | <a href="plugin_management.php">Plugin Management</a> | <a href="php_info.php">PHP Info</a> |  <a href="http://php.mirror.active9.com">PHP Manual</a> |  <a href="Active9_Server_Manual">Active9 Server Manual</a></p>
 </blockquote>
 <br />
 <center><img src="php_server_logo.png" border="0" alt="Active9 Server"></center>

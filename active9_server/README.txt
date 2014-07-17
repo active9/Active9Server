@@ -10,3 +10,5 @@ The rest is done by active9_server.php and the configurations located inside the
 file in this files directory.
 
 http://www.active9.com/server/
+
+The main readme is located in the directory above this files.

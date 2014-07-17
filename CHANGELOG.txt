@@ -1,3 +1,7 @@
+[Version 1.2 - January 17th, 2013]
+ - Added A Git Repo To Manage Changes And Version History
+ - Tested and working with php 5.4.11
+
 [Version 1.1 - April 4th, 2012]
  - Added NetBeans project setup defaults (Importable via NetBeans IDE)
  - Fixed folder logic and linkable logic for the interal server to display the proper data.

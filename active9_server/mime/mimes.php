@@ -16,6 +16,7 @@ class mimes {
 			'bz2'			=> 'application/x-bz2',
 			'css'			=> 'text/css',
 			'csv'			=> 'text/csv',
+                        'dae'                   => 'text/xml',
 			'dmg'			=> 'application/x-apple-diskimage',
 			'doc'			=> 'application/msword',
 			'docx'			=> 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
