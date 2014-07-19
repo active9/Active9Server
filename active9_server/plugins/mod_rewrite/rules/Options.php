@@ -1,6 +1,6 @@
 <?php
 // Active9 Server (http://www.active9.com/server)
-// Copyright 2012 Active9 LLC (Created By: Chris McCaulley <talkquazi@gmail.com>)
+// Copyright 2012-214 Active9 LLC
 // LICENSE: GPL V3
 
 class mod_rewrite_Options {
