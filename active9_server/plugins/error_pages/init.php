@@ -1,7 +1,7 @@
 <?php
 // Active9 Server (http://www.active9.com/server)
-// Copyright 2012 Active9 LLC (Created By: Chris McCaulley <talkquazi@gmail.com>)
-// LICENSE: GPL V3
+// Copyright 2012-214 Active9 LLC
+// LICENSE: GPL V3V3
 
 class error_pages extends active9_server {
 	public $plugin_name;
